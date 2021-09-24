@@ -70,3 +70,17 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+// task 1
+hogwarts.map((person) => {
+  const { firstName, lastName, house } = person;
+  if (house === "Gryffindor") {
+    console.log(`${firstName} ${lastName}`);
+  }
+});
+// task 2
+hogwarts.map((teacher) => {
+  const { firstName, lastName, pet, occupation } = teacher;
+  if (occupation === "Teacher" && pet != null) {
+    console.log(`${firstName} ${lastName}`);
+  }
+});
