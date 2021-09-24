@@ -6,3 +6,16 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+const createReceipt = function (arr) {
+  console.log("QTY     ITEM     TOTAL");
+  let total = 0;
+  arr.map((item) => {
+    ({ itemName, quantity, unitPrice } = item);
+    let totalPrice = quantity * unitPrice;
+    console.log(`${quantity}    ${itemName}    ${totalPrice.toFixed(2)} `);
+    total += totalPrice;
+  });
+  console.log(`TOTAL £${total}`);
+};
+createReceipt(order);
